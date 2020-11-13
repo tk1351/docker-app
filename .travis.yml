@@ -11,5 +11,5 @@ before_install:
 script:
   - docker-compose ps
   - docker-compose logs
-  - docker-compose exec frontend yarn test
-  - docker-compose exec backend yarn test
+  - docker-compose exec frontend_1 yarn test
+  - docker-compose exec backend_1 yarn test
