@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "start": "node-dev index.js",
+    "start": "./node_modules/.bin/node-dev index.js",
     "test": "jest"
   }
 }
