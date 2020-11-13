@@ -9,5 +9,6 @@ before_install:
 
 script:
   - docker-compose ps
+  - docker-compose logs
   - docker-compose exec frontend yarn test
   - docker-compose exec backend yarn test
