@@ -9,11 +9,10 @@ env:
   - DOCKER_COMPOSE_VERSION=1.4.2
 
 before_install:
-  - npx create-react-app --typesctipt
-  - yarn add express node-dev
   - docker-compose up --build -d
 
 script:
+  - ls
   - docker-compose ps
   - docker-compose logs
   - docker-compose exec frontend_1 yarn test
