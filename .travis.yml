@@ -17,5 +17,5 @@ before_install:
 
 script:
   - docker-compose up -d
-  - docker-compose exec frontend yarn test
-  - docker-compose exec backend yarn test
+  - docker-compose exec frontend yarn test --watchAll=false
+  - docker-compose exec backend yarn test --watchAll=false
