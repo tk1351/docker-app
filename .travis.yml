@@ -13,10 +13,8 @@ env:
 before_install:
   - docker-compose up --build -d
   - cd frontend && yarn install
-  - cd .. && cd backend && yarn install
+  - ls
 
 script:
   - docker-compose ps
   - docker-compose logs
-  - docker-compose exec frontend yarn test
-  - docker-compose exec backend yarn test
