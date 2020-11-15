@@ -12,6 +12,6 @@ before_install:
   - docker-compose up --build -d
 
 script:
-  - cd frontend && cat Dockerfile
+  - cd frontend && cat node_modules
   - docker-compose ps
   - docker-compose logs
