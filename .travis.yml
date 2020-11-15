@@ -6,13 +6,14 @@ services:
   - docker
 
 env:
-  - DOCKER_COMPOSE_VERSION=1.4.2
+  - DOCKER_COMPOSE_VERSION=1.8.0
 
 before_install:
-  - docker-compose up --build -d
+  - docker-compose build
 
 script:
   - cd frontend && cat package.json
+  - docker-compose up -d
   - docker-compose ps
   - docker-compose logs
   - docker-compose exec frontend_1 yarn test
