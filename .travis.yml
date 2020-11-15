@@ -12,8 +12,8 @@ env:
 
 before_install:
   - docker-compose up --build -d
-  - cd frontend && ls
-  - cd .. && cd backend && ls
+  - cd frontend && yarn install --frozon-lockfile
+  - cd .. && cd backend && yarn install --frozon-lockfile
 
 script:
   - docker-compose ps
