@@ -4,7 +4,6 @@ WORKDIR /app
 
 COPY backend/package.json /app
 COPY backend/yarn.lock /app
-COPY backend/node_modules /app
 RUN yarn install
 
 COPY ./backend .
