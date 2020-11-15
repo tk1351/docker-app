@@ -17,5 +17,5 @@ before_install:
 
 script:
   - docker-compose up -d
-  - docker-compose ps
-  - docker-compose logs
+  - docker-compose exec frontend yarn test
+  - docker-compose exec backend yarn test
