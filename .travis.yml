@@ -12,8 +12,6 @@ before_install:
   - docker-compose up --build -d
 
 script:
-  - ls
+  - cd frontend && cat Dockerfile
   - docker-compose ps
   - docker-compose logs
-  - docker-compose exec frontend yarn test
-  - docker-compose exec backend yarn test
