@@ -10,8 +10,9 @@ env:
 
 before_install:
   - docker-compose up --build -d
+  - cd frontend && yarn install
+  - cd backend && yarn install
 
 script:
-  - cd frontend && ls
   - docker-compose ps
   - docker-compose logs
