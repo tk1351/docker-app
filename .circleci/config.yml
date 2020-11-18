@@ -12,6 +12,5 @@ jobs:
     steps:
       - run:
           command: 'docker-compose up --build -d'
+      - run:
           command: 'docker-compose up -d'
-
-    
