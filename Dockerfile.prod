@@ -2,8 +2,8 @@ FROM node:12
 
 WORKDIR /app
 
-COPY frontend/package.json /app
-COPY frontend/yarn.lock /app
+COPY package.json /app
+COPY yarn.lock /app
 RUN yarn install
 
 COPY ./frontend .
