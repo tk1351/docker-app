@@ -14,8 +14,8 @@ before_install:
   - docker-compose up --build -d
   - docker login -u "$HEROKU_USERNAME" -p "$HEROKU_API_KEY" registry.heroku.com
   - cd frontend && yarn install --frozon-lockfile && yarn build
-  - cd .. && cd backend && yarn install --frozon-lockfile && ls
-  - cd .. && ls
+  - cd .. && cd backend && yarn install --frozon-lockfile
+  - cd ..
 
 script:
   - docker-compose up -d
