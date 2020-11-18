@@ -3,12 +3,25 @@ version: 2.1
 orbs:
   welcome: circleci/welcome-orb@0.4.1
 
+workflows:
+  my-workflow:
+    jobs:
+      - build:
+          context:
+            - dockerhub-creds
+
 jobs:
   build:
     working_directory: ~/app
     docker:
       - image: docker-app_frontend:latest
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
       - image: docker-app_backend:latest
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
     steps:
       - run:
           command: 'docker-compose up --build -d'
