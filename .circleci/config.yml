@@ -11,7 +11,7 @@ jobs:
       - image: docker-app_backend:latest
     steps:
       - run:
-          name: docker-composeのビルド
+          name: 'docker-composeのビルド'
           command: 'docker-compose up --build -d'
           command: 'docker-compose up -d'
 
