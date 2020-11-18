@@ -28,6 +28,6 @@ deploy:
     docker build -t registry.heroku.com/$HEROKU_APP_NAME/web -f frontend/Dockerfile.prod .;
     docker build -t registry.heroku.com/$HEROKU_APP_NAME/web -f backend/Dockerfile.prod .;
     docker push registry.heroku.com/$HEROKU_APP_NAME/web;
-    heroku run --app $HEROKU_APP_NAME;
+    heroku open --app $HEROKU_APP_NAME;
   on:
     branch: master
