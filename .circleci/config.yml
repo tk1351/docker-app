@@ -11,12 +11,7 @@ jobs:
       - image: docker-app_backend:latest
     steps:
       - run:
-        command: docker-compose up --build -d
-        command: docker-compose up -d
+          command: docker-compose up --build -d
+          command: docker-compose up -d
 
     
-
-workflows:
-  welcome:
-    jobs:
-      - welcome/run
