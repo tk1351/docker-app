@@ -20,6 +20,10 @@ jobs:
           command: docker-compose -f docker-compose.yml build
       - run:
           command: docker-compose up -d
+      - run:
+          command: docker-compose exec frontend yarn test --watchAll=false
+      - run:
+          command: docker-compose exec backend yarn test --watchAll=false
     # working_directory: ~/app
     # docker:
     #   - image: tk1351/docker-app:frontend
