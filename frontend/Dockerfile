@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY frontend/package.json /app
 COPY frontend/yarn.lock /app
-RUN npm cache clear && yarn install
+RUN yarn install
 
 COPY ./frontend .
 
