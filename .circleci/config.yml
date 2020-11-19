@@ -32,4 +32,6 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
-          command: 'pwd'
+          command: |
+            set -x
+            docker-compose build -d
