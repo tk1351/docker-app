@@ -33,7 +33,7 @@ jobs:
       - setup_remote_docker:
           version: 19.03.12
       - run:
-          command: docker-compose up --version
+          command: docker-compose --version
 
     # working_directory: ~/app
     # docker:
