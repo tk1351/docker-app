@@ -19,7 +19,7 @@ jobs:
       - run:
           command: docker-compose up  --build -d
       - run:
-          command: cd frontend && cd node_modules && ls
+          command: cd frontend && ls
 
     # working_directory: ~/app
     # docker:
