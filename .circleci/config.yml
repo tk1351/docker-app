@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: yarn install
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash
       - run:
           command: docker-compose up  --build -d
       - run:
