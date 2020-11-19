@@ -31,7 +31,7 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
-          command: ls
+          command: cat docker-compose.yml
 
     # working_directory: ~/app
     # docker:
