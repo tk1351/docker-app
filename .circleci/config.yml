@@ -32,7 +32,9 @@ jobs:
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - setup_remote_docker
       - run:
-          command: docker-compose --version
+          command: docker-compose up --build -d
+      - run:
+          command: ls
 
     # working_directory: ~/app
     # docker:
