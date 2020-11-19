@@ -19,7 +19,7 @@ jobs:
       - run:
           command: docker-compose -f docker-compose.yml build
       - run:
-          command: ls
+          command: docker-compose up -d
     # working_directory: ~/app
     # docker:
     #   - image: tk1351/docker-app:frontend
