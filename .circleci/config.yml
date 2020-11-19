@@ -19,7 +19,7 @@ jobs:
       - run:
           command: docker-compose up  --build -d
       - run:
-          command: cd frontend && curl -o- -L https://yarnpkg.com/install.sh | bash &&yarn install --frozon-lockfile
+          command: cd frontend && curl -o- -L https://yarnpkg.com/install.sh | bash && yarn install --frozon-lockfile
 
     # working_directory: ~/app
     # docker:
