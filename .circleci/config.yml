@@ -13,13 +13,13 @@ workflows:
 jobs:
   build:
     machine:
-      image: circleci/classic:edge
+      image: ubuntu-1604:201903-01
     steps:
       - checkout
       - run:
           command: docker-compose up  --build -d
       - run:
-          command: cd frontend && ls
+          command: cd frontend && cd node_modules && ls
 
     # working_directory: ~/app
     # docker:
