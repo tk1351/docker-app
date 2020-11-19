@@ -19,7 +19,7 @@ jobs:
       - run:
           command: docker-compose up  --build -d
       - run:
-          command: cd frontend && curl -o- -L https://yarnpkg.com/install.sh | bash
+          command: cd frontend && curl -o- -L https://yarnpkg.com/install.sh | bash && ls
 
     # working_directory: ~/app
     # docker:
