@@ -21,6 +21,7 @@ jobs:
         auth:
           username: $DOCKERHUB_USER
           password: $DOCKERHUB_PASSWORD
+    working_directory: ~/app
     steps:
       - checkout
       - run:
