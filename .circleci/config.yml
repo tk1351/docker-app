@@ -21,7 +21,9 @@ jobs:
       - run:
           command: cd frontend
       - run:
-          command: npm install yarn && yarn install --frozon-lockfile
+          command: curl -o- -L https://yarnpkg.com/install.sh | bash
+      - run:
+          command: yarn install --frozon-lockfile
 
     # working_directory: ~/app
     # docker:
