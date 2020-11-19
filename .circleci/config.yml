@@ -41,7 +41,7 @@ jobs:
       - run:
           command: docker-compose up -d
       - run:
-          command: docker-compose ps
+          command: docker-compose exec frontend yarn test --watchAll=false
 
     # working_directory: ~/app
     # docker:
