@@ -14,11 +14,11 @@ jobs:
   build:
     working_directory: ~/app
     docker:
-      - image: docker-app:frontend
+      - image: tk1351/docker-app:frontend
         auth:
           username: $DOCKERHUB_USER
           password: $DOCKERHUB_PASSWORD
-      - image: docker-app:backend
+      - image: tk1351/docker-app:backend
         auth:
           username: $DOCKERHUB_USER
           password: $DOCKERHUB_PASSWORD
