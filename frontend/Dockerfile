@@ -1,10 +1,10 @@
-FROM node:latest
+FROM node:12
 
 WORKDIR /app
 
 COPY frontend/package.json /app
 COPY frontend/yarn.lock /app
-RUN yarn global bin && yarn install
+RUN yarn install --force
 
 COPY ./frontend .
 
