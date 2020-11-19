@@ -12,26 +12,32 @@ workflows:
 
 jobs:
   build:
-    working_directory: ~/app
-    docker:
-      - image: tk1351/docker-app:frontend
-        auth:
-          username: $DOCKERHUB_USER
-          password: $DOCKERHUB_PASSWORD
-      - image: tk1351/docker-app:backend
-        auth:
-          username: $DOCKERHUB_USER
-          password: $DOCKERHUB_PASSWORD
+    machine:
+      image: circleci/classic:edge
     steps:
-      - setup_remote_docker
+      - checkout
       - run:
-          command: apt-get update && apt-get install -y sudo
-      - run:
-          command: |
-            curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
-            chmod +x ~/docker-compose
-            sudo mv ~/docker-compose /usr/local/bin/docker-compose
-      - run:
-          command: |
-            set -x
-            docker-compose build -d
+          command: docker-compose -f docker-compose.yml build
+    # working_directory: ~/app
+    # docker:
+    #   - image: tk1351/docker-app:frontend
+    #     auth:
+    #       username: $DOCKERHUB_USER
+    #       password: $DOCKERHUB_PASSWORD
+    #   - image: tk1351/docker-app:backend
+    #     auth:
+    #       username: $DOCKERHUB_USER
+    #       password: $DOCKERHUB_PASSWORD
+    # steps:
+    #   - setup_remote_docker
+    #   - run:
+    #       command: apt-get update && apt-get install -y sudo
+    #   - run:
+    #       command: |
+    #         curl -L https://github.com/docker/compose/releases/download/1.19.0/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
+    #         chmod +x ~/docker-compose
+    #         sudo mv ~/docker-compose /usr/local/bin/docker-compose
+    #   - run:
+    #       command: |
+    #         set -x
+    #         docker-compose build -d
