@@ -13,15 +13,20 @@ workflows:
 jobs:
   build:
     machine:
-      image: ubuntu-1604:201903-01
+      image: tk1351/docker-app:frontend
+      auth:
+        username: $DOCKERHUB_USER
+        password: $DOCKERHUB_PASSWORD
+      image: tk1351/docker-app:backend
+      auth:
+        username: $DOCKERHUB_USER
+        password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run:
-          command: curl -o- -L https://yarnpkg.com/install.sh | bash
-      - run:
           command: docker-compose up  --build -d
       - run:
-          command: yarn --version
+          command: ls
 
     # working_directory: ~/app
     # docker:
