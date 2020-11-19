@@ -36,9 +36,11 @@ jobs:
       - run:
           command: docker-compose build
       - run:
-          command: cd frontend && yarn install --frozon-lockfile && cat package.json
+          command: cd frontend && yarn install --frozon-lockfile && ls
       - run:
           command: cd backend && yarn install --frozon-lockfile && ls
+      - run:
+          command: pwd
 
     # working_directory: ~/app
     # docker:
