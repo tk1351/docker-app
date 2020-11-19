@@ -19,7 +19,7 @@ jobs:
       - run:
           command: docker-compose up  --build -d
       - run:
-          command: cd frontend && yarn install --frozon-lockfile
+          command: cd frontend && cd node_modules && ls
 
     # working_directory: ~/app
     # docker:
