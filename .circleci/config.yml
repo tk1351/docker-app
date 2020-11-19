@@ -32,7 +32,9 @@ jobs:
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - setup_remote_docker
       - run:
-          command: cd .. && cd ..
+          command: yarn cache clean
+      - run:
+          command: docker-compose up --build -d
 
     # working_directory: ~/app
     # docker:
