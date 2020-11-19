@@ -33,6 +33,8 @@ jobs:
       - setup_remote_docker:
           version: 19.03.13
       - run:
+          command: set -x DOCKER_TLS_VERIFY 2
+      - run:
           command: docker-compose up --build -d
 
     # working_directory: ~/app
