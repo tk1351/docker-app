@@ -17,9 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: docker-compose up  --build -d
-      - run:
-          command: curl -o- -L https://yarnpkg.com/install.sh | bash
+          command: docker-compose up  --build -d && curl -o- -L https://yarnpkg.com/install.sh | bash
       - run:
           command: cd frontend && yarn install --frozon-lockfile
 
