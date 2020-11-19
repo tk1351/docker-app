@@ -32,6 +32,4 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
-          command: 'docker-compose up --build -d'
-      - run:
-          command: 'docker-compose up -d'
+          command: 'ls'
