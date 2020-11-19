@@ -12,15 +12,15 @@ workflows:
 
 jobs:
   build:
-    # docker:
-    #   - image: tk1351/docker-app:frontend
-    #     auth:
-    #       username: $DOCKERHUB_USER
-    #       password: $DOCKERHUB_PASSWORD
-    #   - image: tk1351/docker-app:backend
-    #     auth:
-    #       username: $DOCKERHUB_USER
-    #       password: $DOCKERHUB_PASSWORD
+    docker:
+      - image: tk1351/docker-app:frontend
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
+      - image: tk1351/docker-app:backend
+        auth:
+          username: $DOCKERHUB_USER
+          password: $DOCKERHUB_PASSWORD
     steps:
       - checkout
       - run:
