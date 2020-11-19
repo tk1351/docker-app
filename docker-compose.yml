@@ -10,7 +10,6 @@ services:
       - '3000:3000'
     volumes:
       - ./frontend:/app
-      - ./frontend/node_modules:/app
     tty: true
 
   backend:
