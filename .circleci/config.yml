@@ -40,7 +40,7 @@ jobs:
       - run:
           command: cd backend && yarn install --frozon-lockfile && ls
       - run:
-          command: docker-compose up
+          command: ls
 
     # working_directory: ~/app
     # docker:
