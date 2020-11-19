@@ -17,13 +17,10 @@ jobs:
     steps:
       - checkout
       - run:
-          command: docker-compose -f docker-compose.yml build
+          command: docker-compose up  --build -f docker-compose.yml -d
       - run:
-          command: docker-compose up -d
-      - run:
-          command: docker-compose exec frontend yarn test --watchAll=false
-      - run:
-          command: docker-compose exec backend yarn test --watchAll=false
+          command: cd frontend && ls
+
     # working_directory: ~/app
     # docker:
     #   - image: tk1351/docker-app:frontend
