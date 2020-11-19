@@ -17,7 +17,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command: docker-compose up  --build -f docker-compose.yml -d
+          command: docker-compose up  --build -d
       - run:
           command: cd frontend && ls
 
