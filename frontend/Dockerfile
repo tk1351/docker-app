@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY frontend/package.json /app
 COPY frontend/yarn.lock /app
-RUN yarn cache clean '/usr/local/share/.cache/yarn/' && yarn install
+RUN yarn global bin && yarn install
 
 COPY ./frontend .
 
