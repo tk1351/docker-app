@@ -32,4 +32,4 @@ jobs:
             chmod +x ~/docker-compose
             sudo mv ~/docker-compose /usr/local/bin/docker-compose
       - run:
-          command: 'ls'
+          command: 'pwd'
