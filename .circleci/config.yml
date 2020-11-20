@@ -40,4 +40,4 @@ jobs:
       - run:
           command: docker-compose up -d
       - run:
-          command: docker-compose exec frontend bash
+          command: docker-compose exec -w /frontend frontend bash
