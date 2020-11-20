@@ -36,4 +36,6 @@ jobs:
       - run:
           command: docker-compose up --build -d
       - run:
-          command: cd frontend && ls
+          command: docker-compose stop
+      - run:
+          command: docker-compose up
