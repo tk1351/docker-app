@@ -40,4 +40,4 @@ jobs:
       - run:
           command: docker-compose up -d
       - run:
-          command: which docker-compose
+          command: docker --version
