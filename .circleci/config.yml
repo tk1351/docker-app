@@ -14,14 +14,6 @@ jobs:
   build:
     docker:
       - image: ubuntu-1604:201903-01
-      # - image: tk1351/docker-app:frontend
-      #   auth:
-      #     username: $DOCKERHUB_USER
-      #     password: $DOCKERHUB_PASSWORD
-      # - image: tk1351/docker-app:backend
-      #   auth:
-      #     username: $DOCKERHUB_USER
-      #     password: $DOCKERHUB_PASSWORD
     working_directory: ~/app
     steps:
       - checkout
@@ -40,3 +32,11 @@ jobs:
           command: docker-compose stop
       - run:
           command: docker-compose up
+# - image: tk1351/docker-app:frontend
+#   auth:
+#     username: $DOCKERHUB_USER
+#     password: $DOCKERHUB_PASSWORD
+# - image: tk1351/docker-app:backend
+#   auth:
+#     username: $DOCKERHUB_USER
+#     password: $DOCKERHUB_PASSWORD
