@@ -34,10 +34,11 @@ jobs:
       - setup_remote_docker:
           version: 19.03.12
       - run:
-          command: docker-compose build
+          command: docker-compose up --build -d
+      - run:
+          command: docker-compose stop
       - run:
           command: docker-compose up
-          working_directory: frontend
 
     # working_directory: ~/app
     # docker:
