@@ -36,7 +36,7 @@ jobs:
       - run:
           command: docker-compose build
       - run:
-          command: yarn init -y && docker-compose up
+          command: docker-compose up
 
     # working_directory: ~/app
     # docker:
