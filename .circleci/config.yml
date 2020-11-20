@@ -40,4 +40,6 @@ jobs:
       - run:
           command: docker-compose up -d
       - run:
-          command: docker-compose exec -w /frontend frontend bash
+          command: export PATH="$PATH:/usr/local/bin"
+      - run:
+          command: docker-compose exec frontend bash
