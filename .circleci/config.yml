@@ -38,4 +38,4 @@ jobs:
       - run:
           command: docker-compose stop
       - run:
-          command: docker-compose up
+          command: docker-compose up -d
