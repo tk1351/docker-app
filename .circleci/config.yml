@@ -29,8 +29,6 @@ jobs:
       - run:
           command: |
             curl -fsSL https://get.docker.com/ | sh
-            chmod +x ~/docker
-            sudo mv ~/docker /usr/local/bin/docker
       - run:
           command: |
             curl -L https://github.com/docker/compose/releases/download/1.27.2/docker-compose-`uname -s`-`uname -m` > ~/docker-compose
