@@ -36,7 +36,7 @@ jobs:
       - run:
           command: docker-compose build
       - run:
-          command: docker-compose up
+          command: cd frontend && docker-compose up
 
     # working_directory: ~/app
     # docker:
